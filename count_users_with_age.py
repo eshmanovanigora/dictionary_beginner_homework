@@ -8,4 +8,27 @@ def count_users_with_age(data:list, age:int) -> int:
     Returns:
         int: The number of users with the given age
     """
-    return 
+    x = 0
+    for i in data:
+        for j in i.values():
+            if j == age:
+                x += 1
+    return x
+
+data = [
+  {
+    'name': 'John',
+    'age': 27
+  },
+  {
+    'name':'Mary', 
+    'age': 42
+  },
+  {
+    'name':'Ann',
+    'age': 27
+  }
+  ]
+age = 40
+
+print(count_users_with_age(data, age))
